@@ -16,20 +16,22 @@ import java.util.HashMap;
  * @author nelsonrogers
  */
 public class Scenario {
-
+    
+    //Attributs
     Bandeau monBandeau;
-    Color fore;
-    Color back;
-    Font font;
     HashMap<Integer, Effet> mesEffets = new HashMap<>();
     HashMap<Effet, Integer> mesEffets2 = new HashMap<>();
     
+    
+    //Constructeur
     public Scenario() {
         monBandeau = new Bandeau();
     }
     
     public void addEffet(int position, Effet monEffet, int nb_repetitions) {
+        //On associe une position à l'effet
         mesEffets.put(position, monEffet);
+        //On y associe également un nombre de répétitions de l'effet
         mesEffets2.put(monEffet, nb_repetitions);
     }
 

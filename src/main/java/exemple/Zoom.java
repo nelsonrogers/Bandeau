@@ -15,19 +15,22 @@ import java.awt.Font;
  */
 public class Zoom extends Effet{
     
+    // Constructeur
     public Zoom(Color couleurEffet, String text) {
         super(couleurEffet, text);
     }
     
+    //Constructeur par défaut
     public Zoom() {
         
     }
     
+    // start() lance l'animation
     @Override
     public void start(Bandeau monBandeau) {
         monBandeau.setForeground(couleurEffet);
-        monBandeau.setFont(new Font("Dialog", Font.BOLD, 5));
         monBandeau.setMessage(text);
+        // On augmente la taille de la police petit à petit : effet zoom
         for (int i = 5; i < 60 ; i+=5) {
                 monBandeau.setFont(new Font("Dialog", Font.BOLD, 5+i));
                 monBandeau.sleep(100);

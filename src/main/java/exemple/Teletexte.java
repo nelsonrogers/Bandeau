@@ -14,20 +14,24 @@ import java.awt.Color;
  */
 public class Teletexte extends Effet {
     
-    
+    //Constructeur
     public Teletexte(Color couleurEffet, String text) {
         super(couleurEffet, text);
     }
     
+    //Constructeur par défaut
     public Teletexte() {
         
     }
     
+    // start() lance l'animation
     @Override
     public void start(Bandeau monBandeau) {
         monBandeau.setForeground(couleurEffet);
+        //On initialise la chaine de caractères
         String message = "";
         for (int i = 0; i < text.length(); i++) {
+                //On ajoute les lettres une par une 
                 message += String.valueOf(text.charAt(i));
 		monBandeau.setMessage(message);
 		monBandeau.sleep(100);
