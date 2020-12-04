@@ -31,7 +31,5 @@ public abstract class Effet {
     }
     
     // Ne fais rien
-    public void start(Bandeau monBandeau) {
-        
-    }
+    public abstract void start(Bandeau monBandeau);
 }
